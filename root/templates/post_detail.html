@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .date { color: #666; font-size: 0.9em; }
+        .content { margin-top: 20px; line-height: 1.6; }
+        .back-link { display: inline-block; margin-top: 30px; color: #000; }
+    </style>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p class="date">{{ post.published_date|date:"F j, Y" }}</p>
+    <div class="content">
+        {{ post.content|linebreaks }}
+    </div>
+    <a href="{% url 'home' %}" class="back-link">← Orqaga</a>
+</body>
+</html>
