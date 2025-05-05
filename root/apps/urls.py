@@ -10,7 +10,4 @@ urlpatterns = [
     path('dashboard/', admin_dashboard, name='admin_dashboard'),
     path('post/edit/<int:pk>/', edit_post, name='edit_post'),
     path('post/delete/<int:pk>/', delete_post, name='delete_post'),
-    
-
-
 ]
